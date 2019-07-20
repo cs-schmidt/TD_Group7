@@ -1,9 +1,9 @@
 package demo1;
 
 public class TdMap{
-	public static int mapx;
-	public static int mapy;
-	public static int[][] mapGrid;
+	public int mapx;
+	public int mapy;
+	public int[][] mapGrid;
 	
 	/*Establishes: {1,1,1,1,1}
 	 * 			   {0,0,0,0,0}
@@ -15,8 +15,26 @@ public class TdMap{
 		this.mapy = mapy;
 	}
 	
-	//Method 
-	public int[][] buildMap() { // make sure it is 5x3.
+	public TdMap(TdMap copy) {
+		this.mapx = copy.mapx;
+		this.mapy = copy.mapy;
+	}
+	
+	//Getters
+	public int getWidth() {
+		int width = mapx;
+		return width;
+	}
+	
+	public int getHeight() {
+		int height = mapy;
+		return height;
+		
+	}
+	
+	
+	//BuilderMethod 
+	public int[][] buildValidityMap() { // make sure it is 5x3.
 		mapGrid = new int[mapy][mapx];
 		for (int i = 0; i < mapy; i++) {
 			for (int j = 0; j < mapx; j++) {
@@ -39,7 +57,7 @@ public class TdMap{
 		
 		return mapGrid;
 		}
-
+	
 	}
 
 

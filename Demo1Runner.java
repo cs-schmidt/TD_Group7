@@ -1,13 +1,8 @@
 package demo1;
+import java.util.Scanner; // when we prompt the user to place a tower.
 
-//Method to test validity grid
-/*for (int i = 0; i < k.length;i++) {
-	for (int j = 0; j < k[0].length; j++) {
-		System.out.print(k[i][j]+ " ");
-	}
-	System.out.println("\n");
-}
-*/
+
+
 
 //COMPONENTS
 
@@ -21,12 +16,34 @@ package demo1;
 	//b)If the enemy passes the tower we take damage when it reaches the end.
 
 public class Demo1Runner {
-	public static void main(String[]args) {
-		TdMap map = new TdMap(5,3);
+	
+	//Method to test validity grid
+	public static void seeValidityGrid(TdMap k) {
 		
-
+	for (int i = 0; i < k.buildValidityMap().length;i++) {
+		for (int j = 0; j < k.buildValidityMap()[0].length; j++) {
+			System.out.print(k.buildValidityMap()[i][j]+ " ");
 		}
+		System.out.println("\n");
 	}
+	}
+	
+	public static void main(String[]args) {
+		TdMap validMap = new TdMap(20,15);
+		Demo1Runner.seeValidityGrid(validMap);
+		Tower[][] TowerMap = Tower.establishTowers(validMap);
+		for (int i = 0; i < TowerMap.length;i++) {
+			for (int j = 0; j < TowerMap[0].length; j++) {
+				if(TowerMap[i][j].getTowerDummyExist() == true)
+					System.out.print(0+ " ");
+				else
+					System.out.print(1+ " ");
+			}
+			System.out.println("\n");
+		}
+
+	}
+}
 
 
 	
