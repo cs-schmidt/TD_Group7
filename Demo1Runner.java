@@ -18,11 +18,11 @@ import java.util.Scanner; // when we prompt the user to place a tower.
 public class Demo1Runner {
 	
 	//Method to test validity grid
-	public static void seeGrid(TdMap k) {
+	public static void seeGrid(int[][] k) {
 		
 	for (int i = 0; i < TdMap.mapy;i++) {
-		for (int j = 0; j <TdMap.mapx; j++) {
-			System.out.print(k.mapGrid[i][j]+ " ");
+		for (int j = 0; j < TdMap.mapx; j++) {
+			System.out.print(k[i][j]+ " ");
 		}
 		System.out.println("");
 	}
@@ -33,12 +33,11 @@ public class Demo1Runner {
 	public static void main(String[]args) {
 		
 		TdMap validMap = new TdMap(5,3);
-		validMap.buildValidityMap();
-		Demo1Runner.seeGrid(validMap);
 		TowerMap TowerMap = new TowerMap(0,0);
-		TowerMap.build_TowerMap();
-		TowerMap.seeTowerMap(TowerMap.build_TowerMap());
-		System.out.println("");
+		int[][] ValidM = validMap.buildValidityMap();
+		int[][] TowerM = TowerMap.build_TowerMap();
+		Demo1Runner.seeGrid(ValidM);
+		Demo1Runner.seeGrid(TowerM);
 	}
 }
 

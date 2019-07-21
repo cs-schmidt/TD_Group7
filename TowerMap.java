@@ -29,13 +29,20 @@ public class TowerMap extends TdMap{
 		}
 	
 	
-	public boolean get_valid_place() {
-		if (this.towerType == 0)
-			return true;
-		else
-			return false;
-	}
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/*	
 	public static void seeTowerMap(int[][] x) {
 		for(int row = 0; row <x.length;row++) {
 			for(int column = 0; column <x[0].length;column++) {
@@ -49,8 +56,12 @@ public class TowerMap extends TdMap{
 		
 	}
 	
+*/	
+	
+	
 }
-
+// Scanner input = new Scanner(System.in)
+// String inputput = input.nextLine():
 //Towers will have X
 /*
 	public TowerMap[][] establishTowers() {
