@@ -1,7 +1,8 @@
+package demo1;
 
 public class TdMap{
-	public static int mapx;
-	public static int mapy;
+	public int mapx;
+	public int mapy;
 	public int[][] mapGrid;
 	
 	/*Establishes: {1,1,1,1,1}
@@ -21,11 +22,13 @@ public class TdMap{
 	
 	//Getters
 	public int getWidth() {
-		return mapx;
+		int width = mapx;
+		return width;
 	}
 	
 	public int getHeight() {
-		return mapy;
+		int height = mapy;
+		return height;
 		
 	}
 	
