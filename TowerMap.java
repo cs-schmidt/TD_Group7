@@ -27,7 +27,30 @@ public class TowerMap extends TdMap{
 		}
 		return towersMap;
 		}
+	public int place_where(char XorY) {
+		int num = 0;
+		Scanner input = new Scanner(System.in);
+		if (XorY == 'Y') {
+			System.out.println("Please Choose the Y Coordinate of your Tower "); //it goes from top left down
+			num = input.nextInt();
+		}
+		if (XorY == 'X') {
+			System.out.println("Please Choose the X Coordinate of your Tower "); //goes from left to right
+			num = input.nextInt();
+			
+		}
+		return num;
+	}
 	
+	public int[][] build_basicTower(int x, int y){ //chooses the coords
+		if (towersMap[y][x] != 9) {
+			towersMap[y][x] = 1;
+		}else {
+			System.out.println("Invalid Placement, Try again");
+		}
+		return towersMap;
+	}
+}
 	
 	
 	
@@ -59,7 +82,7 @@ public class TowerMap extends TdMap{
 */	
 	
 	
-}
+
 // Scanner input = new Scanner(System.in)
 // String inputput = input.nextLine():
 //Towers will have X

@@ -13,12 +13,6 @@ public class TdMap{
 		this.mapx = mapx;
 		this.mapy = mapy;
 	}
-	
-	public TdMap(TdMap copy) {
-		this.mapx = copy.mapx;
-		this.mapy = copy.mapy;
-	}
-	
 	//Getters
 	public int getWidth() {
 		return mapx;
@@ -54,6 +48,7 @@ public class TdMap{
 		
 		return mapGrid;
 		}
+
 	
 	}
 

@@ -20,8 +20,8 @@ public class Demo1Runner {
 	//Method to test validity grid
 	public static void seeGrid(int[][] k) {
 		
-	for (int i = 0; i < TdMap.mapy;i++) {
-		for (int j = 0; j < TdMap.mapx; j++) {
+	for (int i = 0; i < k.length;i++) {
+		for (int j = 0; j < k[0].length; j++) {
 			System.out.print(k[i][j]+ " ");
 		}
 		System.out.println("");
@@ -38,6 +38,11 @@ public class Demo1Runner {
 		int[][] TowerM = TowerMap.build_TowerMap();
 		Demo1Runner.seeGrid(ValidM);
 		Demo1Runner.seeGrid(TowerM);
+	
+		TowerMap.build_basicTower( TowerMap.place_where('X'),TowerMap.place_where('Y'));
+		Demo1Runner.seeGrid(ValidM);
+		Demo1Runner.seeGrid(TowerM);
+		
 	}
 }
 
