@@ -1,4 +1,4 @@
-package demo1;
+
 import java.util.Scanner; // when we prompt the user to place a tower.
 
 
@@ -18,30 +18,27 @@ import java.util.Scanner; // when we prompt the user to place a tower.
 public class Demo1Runner {
 	
 	//Method to test validity grid
-	public static void seeValidityGrid(TdMap k) {
+	public static void seeGrid(TdMap k) {
 		
-	for (int i = 0; i < k.buildValidityMap().length;i++) {
-		for (int j = 0; j < k.buildValidityMap()[0].length; j++) {
-			System.out.print(k.buildValidityMap()[i][j]+ " ");
+	for (int i = 0; i < TdMap.mapy;i++) {
+		for (int j = 0; j <TdMap.mapx; j++) {
+			System.out.print(k.mapGrid[i][j]+ " ");
 		}
-		System.out.println("\n");
+		System.out.println("");
 	}
+	System.out.println("");
 	}
+
 	
 	public static void main(String[]args) {
-		TdMap validMap = new TdMap(20,15);
-		Demo1Runner.seeValidityGrid(validMap);
-		Tower[][] TowerMap = Tower.establishTowers(validMap);
-		for (int i = 0; i < TowerMap.length;i++) {
-			for (int j = 0; j < TowerMap[0].length; j++) {
-				if(TowerMap[i][j].getTowerDummyExist() == true)
-					System.out.print(0+ " ");
-				else
-					System.out.print(1+ " ");
-			}
-			System.out.println("\n");
-		}
-
+		
+		TdMap validMap = new TdMap(5,3);
+		validMap.buildValidityMap();
+		Demo1Runner.seeGrid(validMap);
+		TowerMap TowerMap = new TowerMap(0,0);
+		TowerMap.build_TowerMap();
+		TowerMap.seeTowerMap(TowerMap.build_TowerMap());
+		System.out.println("");
 	}
 }
 
