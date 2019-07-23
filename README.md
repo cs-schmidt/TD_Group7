@@ -7,7 +7,7 @@ The files required to run our demo1 code are as follows:
   2)Tower.java
   3)MapUnderlier.java
   4)Enemy.java
-  5)Display.jav
+  5)Display.java
   
   put these files all into one chosen directory.
   
