@@ -3,11 +3,11 @@
 ***Tower Defence***
 The files required to run our demo1 code are as follows:
  
-  DemoRunner.java
+  ***DemoRunner.java
   , Tower.java
   , MapUnderlier.java
   , Enemy.java
-  , Display.java
+  , Display.java***
   
   put these files all into one chosen directory.
   
