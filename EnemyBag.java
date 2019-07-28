@@ -19,7 +19,7 @@ public class EnemyBag {
 			ArrayList<Enemy> bagOfEnemies = new ArrayList<Enemy>();
 			
 			for(int x = 0; x < BasicEnemy.BRoundFunction(round) ;x++) {
-				Enemy eBasic = new BasicEnemy();
+				Enemy eBasic = new BasicEnemy(map);
 				 bagOfEnemies.add(eBasic);
 			}
 			
@@ -29,7 +29,7 @@ public class EnemyBag {
 			}
 
 			for(int x = 0; x < DamageEnemy.DRoundFunction(round) ;x++) {
-				DamageEnemy eDamage = new DamageEnemy();
+				DamageEnemy eDamage = new DamageEnemy(map);
 				 bagOfEnemies.add(eDamage);
 			}
 			
