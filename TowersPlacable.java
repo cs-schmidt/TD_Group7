@@ -1,10 +1,25 @@
 import java.util.Scanner;
 import java.lang.Math;
 public class TowersPlacable {
+	
 	//Attributes
+	
+		/*Attributes:"towerMap" and "mapTracker"
+		 *Description:
+		 *	Basically towerMap is a 2D-Array for which we place our towers, mapTracker on the other-hand
+		 * 	will store where that location was in a 2D-Integer Array as well as what type it was, this
+		 * 	essentially functions for later use when we want to replace a tower or destroy one.
+		 */
 		private BasicTower[][] towerMap; //TowerMap
-		private int[][] mapTracker;//I'm thinking this one will be where we are able to place the towers.
+		private int[][] mapTracker;
+		
 	//Constructors
+		
+		/*Constructors:"TowersPlacable(int[][] x)"
+		 *Description:
+		 *	The game will start and we will load a map. Then this map (which is a 2D-Integer Array) will
+		 *	be used to establish both the "towerMap" and the "mapTracker" attributes.
+		 */
 		TowersPlacable(int[][] x){//Load one of the maps as an argument.
 			
 			//Makes a Tower map of the same size as the map we load.
@@ -23,7 +38,7 @@ public class TowersPlacable {
 				}
 			}
 			
-			//This sets up the mapTracker.
+			//This sets up the mapTracker. It is initially set up to perfectly copy the map we pass as an argument.
 			rows = 0;
 			for(int i = 0; i < x.length; i++) {
 				rows++;
@@ -40,10 +55,21 @@ public class TowersPlacable {
 		}
 		
 	//Methods
+		//Getters
 		public BasicTower[][] getTowerMap(){
 			return this.towerMap;
 		}
 		
+		/*Method:"placeTower"
+		 *Description:
+		 *	Basically this method will provide the player with a prompt in which he/she will be able to place towers on the map where they choose.
+		 *
+		 *Improvements:
+		 *	We need to be more thorough in checking valid tower placement, account for players "Piggy-bank" funds, implement a better system for 
+		 *	placing various tower types, etc. Needs some work but the foundational ideas are there.
+		 *
+		 *Also be sure to fix up so tower delete and replace work.
+		 */
 		public void placeTower() {
 			//Part just explains input.
 			System.out.println("Enter the coordinates for the towers you wish to place.");//Perhaps make a prompt function.
@@ -59,7 +85,7 @@ public class TowersPlacable {
 			//
 			int coordX = getDigitFromChar(coords.charAt(0));
 			int coordY = getDigitFromChar(coords.charAt(1));
-			if(this.mapTracker[this.mapTracker.length - coordY][coordX-1] == 1) {//This coord system is in classical cartesian, account for this later.
+			if(this.mapTracker[this.mapTracker.length - coordY][coordX-1] == 1) {//This coordinate system is in classical Cartesian, account for this later.
 				System.out.println("This spot is valid, what tower do you desire to place here? ");
 				input = new Scanner(System.in);//Later put in a system of verification.
 				coords = input.nextLine();
@@ -79,7 +105,6 @@ public class TowersPlacable {
 					this.mapTracker[this.mapTracker.length - coordY][coordX-1] = towerType3.getTag();
 				}
 			}
-			
 			else if(this.mapTracker[this.mapTracker.length - coordY][coordX] > 3) {
 				System.out.println("It appears a Tower is already present here it is of type: ");
 				System.out.print(this.towerMap[this.mapTracker.length - coordY][coordX-1].getTag());
@@ -118,18 +143,21 @@ public class TowersPlacable {
 					else if(coords.charAt(0)=='p')
 						//do nothing.
 						;
-				}
-				//else if(this.towerMap[this.mapTracker.length - coordY][coordX-1].getTag() < 6) {
-					//System.out.println("Do you wish to replace it, or destroy it? ");
-				//}
-				
+				}	
 			}
 			else {
 				System.out.println("You cant place your tower on the road");
 			}
 		}
 		
-		//PROBLEM HERE
+		/*Method:"towersShoot(EnemyMap EnemyMap)"
+		 *Description:
+		 *	This method will pass the "EnemyMap" as an argument and compare each tower and any enemies on the road in terms of distance.
+		 *	Towers will shoot those enemies in their range and of highest priority.
+		 *
+		 *Improvements:
+		 *	Not sure if it is good as is, but we should conduct further testing on this method.
+		 */
 		public void towersShoot(EnemyMap EnemyMap) {
 			for(int i = 0; i < this.towerMap.length; i++) {
 				for(int j = 0; j < this.towerMap[i].length; j++) {
@@ -169,7 +197,4 @@ public class TowersPlacable {
 			if (x == 57) {return 9;}
 			else  {return 0;}
 		}
-		
-
-
 }
