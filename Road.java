@@ -4,7 +4,7 @@ public class Road {
 		int[][] roadCoordinates;
 	
 	//Constructors
-		Road(int[][] validityMapBase){
+		public Road(int[][] validityMapBase){
 			this.roadCoordinates = getRoadCoords(validityMapBase);
 		}
 	
@@ -50,7 +50,7 @@ public class Road {
 			for(int num = 0; num < lengthOfRoad;num++) {//This while loop will do a series of checks. You could actually condense this code.
 				try {
 					if(x[i][j+1] == 0) {
-						x[i][j+1] = 1;
+						x[i][j+1] = -1;
 						roadCoords[row][0] = i;
 						roadCoords[row][1] = j+1;
 						row++;
@@ -60,7 +60,7 @@ public class Road {
 				catch(Exception e){}
 				try {
 					if(x[i][j-1] == 0){
-						x[i][j-1] = 1;
+						x[i][j-1] = -1;
 						roadCoords[row][0]= i;
 						roadCoords[row][1]= j-1;
 						row++;
@@ -70,7 +70,7 @@ public class Road {
 				catch(Exception e){}
 				try {
 					if(x[i+1][j] == 0){
-						x[i+1][j] = 1;
+						x[i+1][j] = -1;
 						roadCoords[row][0]= i+1;
 						roadCoords[row][1]= j;
 						row++;
@@ -80,7 +80,7 @@ public class Road {
 				catch(Exception e){}
 				try {
 					if(x[i-1][j] == 0){
-						x[i-1][j] = 1;
+						x[i-1][j] = -1;
 						roadCoords[row][0]= i-1;
 						roadCoords[row][1]= j;
 						row++;
