@@ -15,10 +15,10 @@ public class PiggyBank {
 	}
 	
 	private void enemyKilled(int enemy_gold) {
-		this.gold += enemy_gold;
+		this.gold = this.getGold() + enemy_gold;
 	}
 	private void towerBought(int tower_price) {
-		this.gold -= tower_price;
+		this.gold = this.getGold() - tower_price;
 	}
 	
 }

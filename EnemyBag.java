@@ -3,33 +3,34 @@ import java.util.Collections;
 public class EnemyBag {
 	
 	//Attributes
-		ArrayList<BaseEnemy> enemiesAvailable = new ArrayList<BaseEnemy>();
-		
+		ArrayList<Enemy> enemiesAvailable = new ArrayList<Enemy>();
+		private int[][] map;
 	//Constructors
-		 EnemyBag(int round){//Creates our scrambled bag of enemies.
+		 EnemyBag(int round,int[][] map ){//Creates our scrambled bag of enemies.
 			enemiesAvailable = enemiesForRound(round);
+			this.map = map;
 		}
 		 
 		 EnemyBag(EnemyBag toCopy){
 			 this.enemiesAvailable = toCopy.enemiesAvailable;
 		 }
 	//Methods
-		private ArrayList<BaseEnemy> enemiesForRound(int round){
-			ArrayList<BaseEnemy> bagOfEnemies = new ArrayList<BaseEnemy>();
+		private ArrayList<Enemy> enemiesForRound(int round){
+			ArrayList<Enemy> bagOfEnemies = new ArrayList<Enemy>();
 			
-			for(int x = 0; x < BaseEnemy.bERoundFunction(round) ;x++) {
-				BaseEnemy enemy = new BaseEnemy();
-				 bagOfEnemies.add(enemy);
+			for(int x = 0; x < BasicEnemy.BRoundFunction(round) ;x++) {
+				Enemy eBasic = new BasicEnemy();
+				 bagOfEnemies.add(eBasic);
 			}
 			
-			for(int x = 0; x < EnemyX.eXRoundFunction(round) ;x++) {
-				BaseEnemy enemyX = new EnemyX();
-				 bagOfEnemies.add(enemyX);
+			for(int x = 0; x < TankEnemy.TRoundFunction(round) ;x++) {
+				TankEnemy eTank = new TankEnemy(map);
+				 bagOfEnemies.add(eTank);
 			}
 
-			for(int x = 0; x < EnemyY.eYRoundFunction(round) ;x++) {
-				BaseEnemy enemyY = new EnemyY();
-				 bagOfEnemies.add(enemyY);
+			for(int x = 0; x < DamageEnemy.DRoundFunction(round) ;x++) {
+				DamageEnemy eDamage = new DamageEnemy();
+				 bagOfEnemies.add(eDamage);
 			}
 			
 			Collections.shuffle(bagOfEnemies); //this scrambles the array-list.
@@ -37,7 +38,7 @@ public class EnemyBag {
 		}
 		
 		//Getter
-			public ArrayList<BaseEnemy> getBag() { //Potential privacy leak. ALSO WHY DOES IT SAY IT IS NOT VISIBLE WHEN I MAKE IT PRIVATE AND APPLY IT TO AN INSTANCE OF THE CLASS???***
+			public ArrayList<Enemy> getBag() { //Potential privacy leak. ALSO WHY DOES IT SAY IT IS NOT VISIBLE WHEN I MAKE IT PRIVATE AND APPLY IT TO AN INSTANCE OF THE CLASS???***
 				return enemiesAvailable;
 			}
 
