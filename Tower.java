@@ -10,8 +10,8 @@ public class Tower {
 	private int towerType;	//This is just a band-aid to make what is to come work.
 	private int fireRange;	//Fire range of the tower, unit: grid.
 	private int fireRate;	//Going to put this variable into children classes later.
-	private int Y_Coord;
-	private int X_Coord;
+	private int tower_YCoord;
+	private int tower_XCoord;
 
 	//TODO: After setup economy system.	private int TowerPrice;	
 	
@@ -25,8 +25,8 @@ public class Tower {
 		this.damageInflictable = 1;
 		this.fireRange = 2;
 		this.fireRate = 1;
-		this.X_Coord = X_Coord;
-		this.Y_Coord = Y_Coord;
+		this.tower_XCoord = X_Coord;
+		this.tower_YCoord = Y_Coord;
 	}
 	
 	
@@ -81,8 +81,8 @@ public class Tower {
 	 */
 	public ArrayList<Integer> getPosition(){
 		ArrayList<Integer> position = new ArrayList<Integer>();
-		position.add(X_Coord);
-		position.add(Y_Coord);
+		position.add(tower_XCoord);
+		position.add(tower_YCoord);
 		return position;
 	}
 	
