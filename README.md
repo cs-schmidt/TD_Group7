@@ -1,5 +1,7 @@
 # TD_Group7
 
+1. Enter Demo2 Branch
+
 ***Tower Defence***
 The files required to run our demo1 code are as follows:
  
