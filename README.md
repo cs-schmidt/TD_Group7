@@ -8,4 +8,4 @@ The files required to run our demo1 code are as follows:
   
   put these files all into one chosen directory.
   
-3. Compile and run "Runner.java".
+3. Compile and run "JunitTesting.java".
