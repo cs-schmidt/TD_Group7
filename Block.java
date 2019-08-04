@@ -13,11 +13,11 @@ public class Block extends Rectangle {
 	}
 
 	public void draw(Graphics g) {
-		g.drawImage(GUI.tileast_ground[groundID], x, y, width, height, null);
-		// i assume we have a GUI class
+		g.drawImage(Screen.tileset_ground[groundID], x, y, width, height, null);
+
 		if(airID !=Value.airAir) {
-			g.drawImage(GUI.tileast_ground[airID], x, y, width, height, null);
-			// i assume we have a GUI class
+			g.drawImage(Screen.tileset_ground[airID], x, y, width, height, null);
+
 		}
 	}
 
