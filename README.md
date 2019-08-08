@@ -1,7 +1,7 @@
 # TD_Group7
 
 ***Tower Defence***
-The files required to run our demo1 code are as follows:
+The files required to run our demo3 code are as follows:
  
   ***Download the zip file "GUIDEMO.zip" in the branch: DemoGUI***
   
