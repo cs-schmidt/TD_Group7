@@ -1,15 +1,10 @@
 # TD_Group7
 
 ***Tower Defence***
-The files required to run our demo1 code are as follows:
+The files required to run our demo3 code are as follows:
  
-  ***DemoRunner.java
-  , Tower.java
-  , MapUnderlier.java
-  , Enemy.java
-  , Display.java***
+  ***Download the zip file "GUIDEMO.zip" in the branch: DemoGUI***
   
-  put these files all into one chosen directory.
+  unzip the file in one chosen directory.
   
-  The code is run through "DemoRunner", so be sure to compile that java file.
-  
+  open the "GUI" file, compile and run "GUI.java" file.
