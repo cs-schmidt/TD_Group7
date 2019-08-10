@@ -49,15 +49,3 @@ public class QuitBox {
 		return quitInfo;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
