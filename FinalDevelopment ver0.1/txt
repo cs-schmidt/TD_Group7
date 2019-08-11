@@ -1,0 +1,17 @@
+Aight, so far this is all of the basic logic now all we need is:
+  
+  (Semi-major Tasks)  --> {i.e. Will take some time,but will be done relatively soon.}
+  1)Fully implement the economy.
+  2)Add a save capability.
+  3)Fully layout how we want the GUI to look.
+  4)TowerShooting Visuals in GUI.
+  
+  (Minor Tasks) --> {i.e. Won't take very long.}
+  1)Tune up the text Version a little.
+  2)Full Javadoc.
+  3)Junit test class.
+  4)GUI version folder and readme added to github.
+  5)Text-based version folder and readme added to github.
+  6)Updated UML ClassDiagram.
+  7)InteractableDemo Presention Schema.
+  
