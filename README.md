@@ -3,7 +3,7 @@
 ***Tower Defence***
 The files required to run our demo3 code are as follows:
  
-  ***Download the zip file "GUIDEMO.zip" in the branch: DemoGUI***
+  ***Download the zip file "AlmostDone.zip" in the branch: DemoGUI***
   
   unzip the file in one chosen directory.
   
