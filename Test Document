@@ -1,0 +1,46 @@
+1. Compile and run the GUIversion2 package, GUI.java file to run the gui version.
+
+
+2. First, you will enter a Menu Scene:
+Click the "INFO" button to check the information of this game.
+Click the "START" button to enter the MapChooseScene.
+
+
+3. On the ChooseMapScene, you can choose one of the three maps.
+
+------------------------------------------------------------------
+YOU < CAN NOT > GO BACK TO THE CHOOSE MAP ONCE YOU CHOOSE A MAP!
+If you wants to play other maps, you need to close the porgram, 
+compile it and run it again.
+------------------------------------------------------------------
+
+4. Once you enter one map, you can check information of the enemies and towers through the right hand side "INFO" button.
+
+
+5. The game tasks is to prevent the bugs reach your picnic.
+
+
+6. The dirtland grids are the roads, and the grassland grids are the place you can place towers.
+
+
+7. A window will pop-up if you click on one of the grassland grid,you can choose three types of towers to place, the fourth button is the button to delete the tower on the map.
+
+
+8. Right hand side blocks are info blocks.
+The first block contains the INFO button,
+The second block contains the Round Counter,
+The third block contains the gold counter, you need gold to build a tower, and you can gain gold by kill the bugs,
+The fourth block is a counter that counts how many bugs you have killed.
+The last bolck is the HP counter for the player, if your HP goes to zero, you will lose.
+
+
+9. Click on the top left coner to start a round.
+You can have as many rounds as you wish.
+
+
+----------------------------------------------
+Compile and run the textBasedVersion package, TextGameLogic.java file to run the text version.
+The step to step instruction is in the text version of the game.
+
+----------------------------------------------
+The JUnit Test is javadoced, You can check what does the tests do in the javadoc of the EnemyMapJUNIT.java file.
