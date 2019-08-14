@@ -1,6 +1,6 @@
 This folder contains the "TextVersion" zip file which contains all of the packages to run the text based version.
 
-Steps To Compile and Run:
+Steps To Compile and Run:<br>
   1)First download the "TextVersion.zip".<br>
   2)Create a new eclipse project.<br>
   3)Then extract to your eclipse projects src folder.<br>
