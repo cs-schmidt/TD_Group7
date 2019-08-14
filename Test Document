@@ -44,4 +44,4 @@ Compile and run the TextGameLogic.java file inside the textBasedVersion package.
 The step to step instruction of the game play is in the text version of the game.
 
 ----------------------------------------------
-The JUnit Test is javadoced, You can check what does the tests do in the javadoc of the EnemyMapJUNIT.java file.
+The JUnit Test is javadoced, You can check what does the tests do in the javadoc of the EnemyMapJUNIT.java, which is is the package "enemyManager".
