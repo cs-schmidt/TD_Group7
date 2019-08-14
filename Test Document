@@ -39,8 +39,9 @@ You can have as many rounds as you wish.
 
 
 ----------------------------------------------
-Compile and run the textBasedVersion package, TextGameLogic.java file to run the text version.
-The step to step instruction is in the text version of the game.
+Compile and run the TextGameLogic.java file inside the textBasedVersion package.
+
+The step to step instruction of the game play is in the text version of the game.
 
 ----------------------------------------------
 The JUnit Test is javadoced, You can check what does the tests do in the javadoc of the EnemyMapJUNIT.java file.
